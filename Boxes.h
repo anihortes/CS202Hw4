@@ -15,7 +15,14 @@ public:
     int getHeight(){
         return _height;
     };
-    
+
+    void setWidth(int width){
+        _width = width;
+    };
+    void setHeight(int height){
+        _height = height;
+    };
+
 private:
     int _width;
     int _height;
