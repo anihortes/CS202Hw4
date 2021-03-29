@@ -7,6 +7,7 @@
 #include <iostream>
 #include <ostream>
 #include <string>
+#include <memory>
 
 class Box {
 public:
@@ -42,7 +43,7 @@ class FilledBox : public Box{
 public:
     using Box::Box;
     std::string type() const override {
-        return "Filled Box";
+        return "Filled";
     };
     void print(std::ostream &os) const override;
 };
@@ -51,7 +52,7 @@ class HollowBox : public Box{
 public:
     using Box::Box;
     std::string type() const override {
-        return "Filled Box";
+        return "Hollow";
     };
     void print(std::ostream &os) const override;
 };
@@ -60,9 +61,11 @@ class CheckeredBox : public Box{
 public:
     using Box::Box;
     std::string type() const override {
-        return "Filled Box";
+        return "Checkered";
     };
     void print(std::ostream &os) const override;
 };
+
+std::unique_ptr<Box> boxFactory(char, int, int);
 
 #endif //CS202HW4_BOX_H
