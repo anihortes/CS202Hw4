@@ -15,6 +15,8 @@ void FilledBox::print(std::ostream &os) const{
 
 void HollowBox::print(std::ostream &os) const {
     for (auto i = 0; i < getHeight(); ++i){
+        // if/else statements check to see if it
+        // should print a character or white space
         if (i == 0 || i == getHeight()-1){
             for(auto j = 0; j < getWidth(); ++j){
                 os << "x";
@@ -36,6 +38,8 @@ void HollowBox::print(std::ostream &os) const {
 
 void CheckeredBox::print(std::ostream &os) const {
     for(auto i = 0; i < getHeight(); ++i){
+        // if/else statements check to see if it
+        // should print a character or white space
         if(i%2 == 0){
             for (auto j = 0; j < getWidth(); ++j){
                 if(j%2 == 0){

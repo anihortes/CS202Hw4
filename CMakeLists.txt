@@ -3,4 +3,4 @@ project(CS202Hw4)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(CS202Hw4 main.cpp Box.cpp Box.h)
+add_executable(CS202Hw4 Box.cpp Box.h)
